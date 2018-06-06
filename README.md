@@ -51,3 +51,14 @@ done when doing `npm start`)
 
 ### Add new entities to the database
 `npm run db:update`
+
+
+## Configuring your IDE
+### Eclipse PDT
+Fix source paths:
+
+1) Project properties → PHP → Build Path:
+  - remove everything
+  - add app, src, vendor
+  - Apply
+2) Right click vendor and app → Use As Library Folder
