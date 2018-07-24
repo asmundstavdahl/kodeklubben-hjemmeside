@@ -166,7 +166,6 @@ class Image
         $image->setClub($club);
         $image->setFileName(self::getPlaceholderFilename());
         $image->setFilePath(self::getPlaceholderPath());
-        $image->setFile(new File(__DIR__."/../../../web/".self::getPlaceholderPath()));
         return $image;
     }
 
