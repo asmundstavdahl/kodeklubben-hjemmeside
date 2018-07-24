@@ -166,12 +166,16 @@ class Image
         $image->setClub($club);
         $image->setFileName(self::getPlaceholderFilename());
         $image->setFilePath(self::getPlaceholderPath());
-        $image->setFile(new File(self::getPlaceholderPath()));
+        $image->setFile(new File(__DIR__."/../../../web/".self::getPlaceholderPath()));
         return $image;
     }
+
+    /**
+     * @return string path to placeholder image relative to public directory
+     */
     private static function getPlaceholderPath()
     {
-        return __DIR__."/../../../web/img/club/default/placeholder.svg";
+        return "img/club/default/placeholder.svg";
     }
     private static function getPlaceholderFilename()
     {
