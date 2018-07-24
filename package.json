@@ -21,7 +21,7 @@
     "gulp-uglify": "^1.5.1"
   },
   "scripts": {
-    "test": "./bin/phpunit --configuration app/phpunit.xml.dist",
+    "test": "cd web && ../bin/phpunit --configuration ../app/phpunit.xml.dist",
     "test:win": ".\\bin\\phpunit --configuration app/phpunit.xml.dist",
     "setup": "php ./composer.phar install -n && npm install && ./node_modules/.bin/gulp build:dev && php app/console doctrine:schema:create --env=dev && php app/console doctrine:fixtures:load --env=dev -n",
     "setup:win": "php .\\composer.phar install -n && npm install && .\\node_modules\\.bin\\gulp build:dev && php app/console doctrine:schema:create --env=dev && php app/console doctrine:fixtures:load --env=dev -n",
