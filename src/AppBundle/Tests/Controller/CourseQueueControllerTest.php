@@ -141,7 +141,9 @@ class CourseQueueControllerTest extends AppWebTestCase
         $crawler = $client->request('GET', '/pamelding');
 
         // Assert that the first course has room for two more participants
-        $this->assertEquals(1, $crawler
+        $this->assertEquals(
+            1,
+            $crawler
             ->filter('footer')
             ->first()
             ->filter('p:contains("2 ledige plasser")')
@@ -156,7 +158,9 @@ class CourseQueueControllerTest extends AppWebTestCase
         $crawler = $client->getCrawler();
 
         // Assert that the first course has room for two more participants
-        $this->assertEquals(1, $crawler
+        $this->assertEquals(
+            1,
+            $crawler
             ->filter('footer')
             ->first()
             ->filter('p:contains("1 ledig plass")')
@@ -171,7 +175,9 @@ class CourseQueueControllerTest extends AppWebTestCase
         $crawler = $client->getCrawler();
 
         // Assert that the first course is full
-        $this->assertEquals(1, $crawler
+        $this->assertEquals(
+            1,
+            $crawler
             ->filter('footer')
             ->first()
             ->filter('p:contains("0 ledige plasser")')
@@ -179,7 +185,9 @@ class CourseQueueControllerTest extends AppWebTestCase
         );
 
         // Assert that the first course contains a button to sign up to the queue
-        $this->assertEquals(1, $crawler
+        $this->assertEquals(
+            1,
+            $crawler
             ->filter('footer')
             ->first()
             ->filter('button:contains("Venteliste")')

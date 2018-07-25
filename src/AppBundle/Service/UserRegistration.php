@@ -27,9 +27,13 @@ class UserRegistration
      *
      * @internal param ClubFinder $clubFinder
      */
-    public function __construct(UserPasswordEncoder $passwordEncoder, EntityManager $manager, ClubManager $clubManager,
-                                \Twig_Environment $twig, \Swift_Mailer $mailer)
-    {
+    public function __construct(
+        UserPasswordEncoder $passwordEncoder,
+        EntityManager $manager,
+        ClubManager $clubManager,
+                                \Twig_Environment $twig,
+        \Swift_Mailer $mailer
+    ) {
         $this->passwordEncoder = $passwordEncoder;
         $this->manager = $manager;
         $this->clubManager = $clubManager;

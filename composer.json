@@ -10,7 +10,7 @@
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
     "require": {
-        "php"                                  : ">=7.0",
+        "php"                                  : ">=7.2",
         "doctrine/doctrine-bundle"             : "~1.5",
         "doctrine/doctrine-fixtures-bundle"    : "~2.2",
         "doctrine/orm"                         : "~2.4",
@@ -26,12 +26,11 @@
         "symfony/assetic-bundle"               : "~2.6",
         "symfony/monolog-bundle"               : "~2.7",
         "symfony/swiftmailer-bundle"           : "~2.3",
-        "symfony/symfony"                      : "~3.2",
+        "symfony/symfony"                      : "~3.4",
         "twig/extensions"                      : "^1.5",
         "friendsofsymfony/jsrouting-bundle"    : "^1.6",
         "symfony/filesystem"                   : "^2.8",
         "doctrine/doctrine-migrations-bundle"  : "^1.0",
-        "phpunit/phpunit"                      : "^5.5",
         "exercise/htmlpurifier-bundle"         : "^0.2.3",
         "egeloen/ckeditor-bundle"              : "^4.0",
         "twig/twig": "~1.34"
@@ -39,7 +38,7 @@
     "require-dev": {
         "ext-pdo_sqlite"                       : "*",
         "sensio/generator-bundle"              : "~3.0",
-        "friendsofphp/php-cs-fixer"            : "^2.0"
+        "phpunit/phpunit": "^7"
     },
     "scripts": {
         "post-install-cmd": [
@@ -70,7 +69,7 @@
     "config": {
         "bin-dir": "bin",
         "platform": {
-            "php": "7.0"
+            "php": "7.2"
         }
     },
     "extra": {
