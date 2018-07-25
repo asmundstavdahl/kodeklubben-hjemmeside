@@ -1,13 +1,13 @@
 language: php
 
 php:
-  - 7.0
+  - 7.2
 
 before_script:
   - composer install
 
 script:
-  - ./bin/php-cs-fixer fix src/ --dry-run --diff -vv
+  - ./app/php-cs-fixer.phar fix src/ --dry-run --diff -vv
   - ./bin/phpunit --configuration app/phpunit.xml.dist
 
 notifications:
