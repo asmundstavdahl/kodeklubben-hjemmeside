@@ -31,10 +31,10 @@
     "db:update": "php app/console doctrine:schema:update --force --env=dev",
     "build": "gulp build:dev",
     "build:prod": "gulp build:prod",
-    "code-style": "./bin/php-cs-fixer fix src/ --dry-run --diff -vv",
-    "code-style:win": ".\\bin\\php-cs-fixer fix src/ --dry-run --diff -vv",
-    "cs": "./bin/php-cs-fixer fix src/ -vv",
-    "cs:win": ".\\bin\\php-cs-fixer fix src/ -vv"
+    "code-style": "./app/php-cs-fixer.phar fix src/ --dry-run --diff -vv",
+    "code-style:win": ".\\app\\php-cs-fixer.phar fix src/ --dry-run --diff -vv",
+    "cs": "./app/php-cs-fixer.phar fix src/ -vv",
+    "cs:win": ".\\app\\php-cs-fixer.phar fix src/ -vv"
   },
   "author": "",
   "license": "",
