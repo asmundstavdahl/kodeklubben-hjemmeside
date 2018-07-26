@@ -158,6 +158,8 @@ class AvailabilityFunctionalTest extends AppWebTestCase
             array('/kontrollpanel/statisk_innhold/veileder'),
             array('/kontrollpanel/statisk_innhold/om_deltakere'),
             array('/kontrollpanel/statisk_innhold/om_veiledere'),
+            array('/kontrollpanel/sponsors'),
+            array('/kontrollpanel/sponsors/new'),
         );
     }
 }

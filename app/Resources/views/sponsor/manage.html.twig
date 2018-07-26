@@ -9,18 +9,27 @@
     <section class="content">
         {% for sponsor in sponsors %}
             <div class="row alternating-colors v-padded">
-                <div class="col-xs-12 col-md-10">
+                <div class="col-xs-12 col-md-9">
                     <big>{{ sponsor.name }}</big>
                 </div>
-                <div class="col-xs-6 col-md-1">
-                    <a class="btn btn-xs btn-flat btn-success" href="{{ path('cp_edit_sponsor', {sponsor: sponsor.id}) }}">
+                <div class="col-xs-4 col-md-1">
+                    <a class="btn btn-xs btn-flat btn-info" href="{{ path('cp_edit_sponsor', {sponsor: sponsor.id}) }}">
                         Endre info
                     </a>
                 </div>
-                <div class="col-xs-6 col-md-1">
+                <div class="col-xs-4 col-md-1">
                     {% include 'image/edit_image_button.html.twig' with { 'image': get_sponsor_image(sponsor.id) } %}
+                </div>
+                <div class="col-xs-4 col-md-1">
+                    <a class="btn btn-xs btn-flat btn-danger" href="{{ path('cp_delete_sponsor', {sponsor: sponsor.id}) }}">
+                        Slett
+                    </a>
                 </div>
             </div>
         {% endfor %}
+    </section>
+
+    <section class="content-header">
+        <a class="btn btn-xs btn-flat btn-success" href="{{ path('cp_new_sponsor') }}">Ny sponsor</a>
     </section>
 {% endblock %}
