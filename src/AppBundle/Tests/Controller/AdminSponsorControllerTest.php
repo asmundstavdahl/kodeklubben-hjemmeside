@@ -10,7 +10,8 @@ class AdminSponsorControllerTest extends AppWebTestCase
     private $entityManager;
     private $clubManager;
 
-    protected function setUp(){
+    protected function setUp()
+    {
         $container = \TestDataManager::$kernel->getContainer();
         $this->entityManager = $container->get("doctrine")->getManager();
         $this->clubManager = $container->get("club_manager");
