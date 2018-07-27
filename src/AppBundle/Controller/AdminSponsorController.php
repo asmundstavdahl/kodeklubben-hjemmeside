@@ -102,7 +102,7 @@ class AdminSponsorController extends Controller
      * @return Response
      *
      * @Route("/sponsors/{sponsor}/delete", name="cp_delete_sponsor")
-     * @Method({"GET", "POST"})
+     * @Method({"GET"})
      */
     public function deleteSponsorAction(Request $request, Sponsor $sponsor)
     {
