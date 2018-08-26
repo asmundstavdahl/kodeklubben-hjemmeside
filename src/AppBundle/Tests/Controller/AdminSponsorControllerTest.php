@@ -72,7 +72,7 @@ class AdminSponsorControllerTest extends AppWebTestCase
         $this->entityManager->flush();
 
         $sponsorId = $sponsor->getId();
-        
+
         $crawler = $this->goToSuccessful($client, '/');
 
         $this->assertEquals(1, $crawler->filter("h3:contains('$sponsorName')")->count());
@@ -84,7 +84,7 @@ class AdminSponsorControllerTest extends AppWebTestCase
         $form['sponsor[name]'] = $sponsorNameEdited = "{$sponsorName} edited";
         $form['sponsor[url]'] = $sponsorUrlEdited = "{$sponsorUrl} edited";
 
-        $client->submit($form);
+        $crawler = $client->submit($form);
 
         $this->assertTrue($client->getResponse()->isRedirect('/kontrollpanel/sponsors'));
 
@@ -117,16 +117,15 @@ class AdminSponsorControllerTest extends AppWebTestCase
         $this->entityManager->flush();
 
         $sponsorId = $sponsor->getId();
-        
+
         $crawler = $this->goToSuccessful($client, '/');
         $this->assertEquals(1, $crawler->filter("h3:contains('$sponsorName')")->count());
 
         $crawler = $this->goToSuccessful($client, "/kontrollpanel/sponsors");
-        $deleteUri = $crawler->selectLink("Slett")->link()->getUri();
-        $deletePath = "/kontrollpanel/sponsors/{$sponsorId}/delete";
-        $this->assertNotEqual(-1, strpos($deleteUri, $deletePath));
-        $crawler = $this->goToSuccessful($client, $deletePath);
+        #$link = $crawler->selectLink("Slett")->link();
+        #$crawler = $client->click($link);
 
+        $client->request("GET", "/kontrollpanel/sponsors/{$sponsorId}/delete");
         $this->assertTrue($client->getResponse()->isRedirect('/kontrollpanel/sponsors'));
 
         // Assert that new content now exists on home page
