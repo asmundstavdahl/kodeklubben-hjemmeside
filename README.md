@@ -1,6 +1,6 @@
 ## Set up development environment
 ### Requirements
-- [PHP](http://php.net/downloads.php) version >= 7.0
+- [PHP](http://php.net/downloads.php) version >= 7.2
 - [Node](https://nodejs.org/en/) version >= 4
 
 #### UNIX:
