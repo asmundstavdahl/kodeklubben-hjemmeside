@@ -2,14 +2,18 @@
 
 {% block body %}
     <section class="content-header">
-        <h1>Endrer sponsor</h1>
+        {% if sponsor.id %}
+            <h1>Endrer sponsor</h1>
+        {% else %}
+            <h1>Lager ny sponsor</h1>
+        {% endif %}
         <hr>
     </section>
 
     <section class="content">
         {{ form_start(form) }}
         {{ form_widget(form) }}
-        <button class="btn btn-primary btn-sm onclick-disable" type="submit">Lagre endringer</button>
+        <button class="btn btn-primary btn-sm onclick-disable" type="submit">Lagre</button>
         {{ form_end(form) }}
     </section>
 {% endblock %}

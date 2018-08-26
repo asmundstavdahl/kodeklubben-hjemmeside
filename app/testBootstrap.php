@@ -23,8 +23,11 @@ TestDataManager::executeCommand($application, "doctrine:schema:create");
 TestDataManager::executeCommand($application, "doctrine:fixtures:load");
 TestDataManager::backupDatabase();
 
+TestDataManager::$kernel = $kernel;
+
 class TestDataManager
 {
+    public static $kernel;
 
     /**
      * TestDataManager constructor.
