@@ -23,6 +23,9 @@
         <div class="container">
             {% block body %}{% endblock %}
         </div>
+        <div class="container">
+            {{ render(controller('AppBundle:Home:showSponsors')) }}
+        </div>
         <div class="container-fluid">
             {% include 'base/footer.html.twig' %}
         </div>
