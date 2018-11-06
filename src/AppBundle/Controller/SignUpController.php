@@ -245,6 +245,27 @@ class SignUpController extends Controller
 
             $role = $isSubstitute ? 'vikar' : 'veileder';
             $this->addFlash('success', 'Du har meldt deg på '.$course->getName().' som '.$role);
+
+            // Send an email notification to the Club's email about the newly registered tutor
+            $club = $this->get('club_manager')->getCurrentClub();
+            $courseName = $course->getName();
+            $courseDescription = $course->getDescription();
+            /*
+             * @var \Swift_Mime_Message
+             */
+            $emailMessage = \Swift_Message::newInstance()
+                ->setSubject("Ny {$role} på {$courseName} ({$courseDescription})")
+                ->setFrom('ikkesvar@kodeklubben.no')
+                ->setTo($club->getEmail())
+                ->setBody($this->renderView('email/new_tutor_notification_email.txt.twig', [
+                    'course' => $course,
+                    'club' => $club,
+                    'tutor' => $user,
+                    'role' => $role,
+                    'nTutors' => count($course->getTutors()),
+                    'nSubstitutes' => count($course->getSubstitutes()),
+                ]));
+            $ret = $this->get('mailer')->send($emailMessage);
         }
 
         return $this->redirectToRoute('sign_up');

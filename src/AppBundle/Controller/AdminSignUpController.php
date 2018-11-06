@@ -194,6 +194,7 @@ class AdminSignUpController extends Controller
         return $this->redirect($request->headers->get('referer'));
     }
 
+    // Ubrukt?? Se SignUpController::signUpTutorAction
     private function signUpTutor(Request $request, Course $course, User $user)
     {
         $this->get('club_manager')->denyIfNotCurrentClub($course);
