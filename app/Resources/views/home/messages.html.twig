@@ -18,13 +18,3 @@
         </div>
     </div>
 </div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        $('.message').each(function () {
-            var message = $(this);
-            message.on("click", function () {
-                message.css("white-space") == "nowrap" ? message.css("white-space", "normal") : message.css("white-space", "nowrap");
-            })
-        });
-    });
-</script>
