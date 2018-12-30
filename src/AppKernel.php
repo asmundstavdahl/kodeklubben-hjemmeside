@@ -47,4 +47,14 @@ class AppKernel extends Kernel
     {
         $loader->load($this->getProjectDir().'/config/config_'.$this->getEnvironment().'.yml');
     }
+
+    public function getCacheDir()
+    {
+        return $this->getProjectDir().'/cache/'.$this->environment;
+    }
+
+    public function getLogDir()
+    {
+        return $this->getProjectDir().'/logs';
+    }
 }

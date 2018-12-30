@@ -36,10 +36,10 @@ crashlytics-build.properties
 /web/js/
 /web/fonts/
 
-/src/cache/*
-!src/cache/.gitkeep
-/src/logs/*
-!src/logs/.gitkeep
+/cache/*
+!cache/.gitkeep
+/logs/*
+!logs/.gitkeep
 
 ### NPM ###
 node_modules
