@@ -7,7 +7,7 @@
         "psr-4": {
             "AppBundle\\": "src/AppBundle"
         },
-        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
+        "classmap": [ "src/AppKernel.php", "src/AppCache.php" ]
     },
     "require": {
         "php"                                  : ">=7.2",
