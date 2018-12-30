@@ -24,11 +24,7 @@ crashlytics-build.properties
 
 ### Symfony ###
 /app/bootstrap.php.cache
-/app/cache/*
-!app/cache/.gitkeep
 /config/parameters.yml
-/app/logs/*
-!app/logs/.gitkeep
 /app/data/*.db
 /app/phpunit.xml
 /bin/
@@ -39,7 +35,11 @@ crashlytics-build.properties
 /web/css/
 /web/js/
 /web/fonts/
-/build/
+
+/src/cache/*
+!src/cache/.gitkeep
+/src/logs/*
+!src/logs/.gitkeep
 
 ### NPM ###
 node_modules
