@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 
 var path = {
     dist: 'web/',
-    src: 'app/Resources/assets/'
+    src: 'assets/'
 };
 
 function stylesProd(){
