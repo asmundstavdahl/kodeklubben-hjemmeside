@@ -26,7 +26,7 @@ crashlytics-build.properties
 /app/bootstrap.php.cache
 /app/cache/*
 !app/cache/.gitkeep
-/app/config/parameters.yml
+/config/parameters.yml
 /app/logs/*
 !app/logs/.gitkeep
 /app/data/*.db
