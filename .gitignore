@@ -41,6 +41,9 @@ crashlytics-build.properties
 /logs/*
 !logs/.gitkeep
 
+/var/*
+/php_errors.log
+
 ### NPM ###
 node_modules
 
