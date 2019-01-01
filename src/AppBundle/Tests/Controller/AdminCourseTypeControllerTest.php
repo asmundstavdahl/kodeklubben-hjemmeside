@@ -4,6 +4,9 @@ namespace AppBundle\Tests\Controller;
 
 class AdminCourseTypeControllerTest extends CourseTestBase
 {
+    /**
+     * @group course_type
+     */
     public function testCreate()
     {
         $client = $this->getAdminClient();
@@ -25,6 +28,9 @@ class AdminCourseTypeControllerTest extends CourseTestBase
         \TestDataManager::restoreDatabase();
     }
 
+    /**
+     * @group course_type
+     */
     public function testErrorWhenCreateCourseTypeWithSameNameTwice()
     {
         $client = $this->getAdminClient();
@@ -48,6 +54,9 @@ class AdminCourseTypeControllerTest extends CourseTestBase
         \TestDataManager::restoreDatabase();
     }
 
+    /**
+     * @group course_type
+     */
     public function testUpdate()
     {
         $client = $this->getAdminClient();
@@ -77,6 +86,9 @@ class AdminCourseTypeControllerTest extends CourseTestBase
         \TestDataManager::restoreDatabase();
     }
 
+    /**
+     * @group course_type
+     */
     public function test404errorsAfterDeletingCourseType()
     {
         $client = $this->getAdminClient();
@@ -94,6 +106,9 @@ class AdminCourseTypeControllerTest extends CourseTestBase
         \TestDataManager::restoreDatabase();
     }
 
+    /**
+     * @group course_type
+     */
     public function testCourseTypePageAfterDeletingCourseType()
     {
         $courseTypeCountBefore = $this->countCourseTypesOnCourseTypePage();
@@ -110,6 +125,9 @@ class AdminCourseTypeControllerTest extends CourseTestBase
         \TestDataManager::restoreDatabase();
     }
 
+    /**
+     * @group course_type
+     */
     public function testCoursesAdminPageAfterDeletingCourseType()
     {
         $courseCountBefore = $this->countCoursesOnCoursePage();
@@ -124,6 +142,9 @@ class AdminCourseTypeControllerTest extends CourseTestBase
         \TestDataManager::restoreDatabase();
     }
 
+    /**
+     * @group course_type
+     */
     public function testParticipantsPageAfterDeletingCourseType()
     {
         $participantCountBefore = $this->countParticipantsOnParticipantsPage();
@@ -138,6 +159,9 @@ class AdminCourseTypeControllerTest extends CourseTestBase
         \TestDataManager::restoreDatabase();
     }
 
+    /**
+     * @group course_type
+     */
     public function testTutorsPageAfterDeletingCourseType()
     {
         $tutorCountBefore = $this->countTutorsOnTutorsPage();
@@ -152,6 +176,9 @@ class AdminCourseTypeControllerTest extends CourseTestBase
         \TestDataManager::restoreDatabase();
     }
 
+    /**
+     * @group course_type
+     */
     public function testSignupPageAfterDeletingCourseType()
     {
         $courseCountBefore = $this->countCoursesOnSignupPage();
@@ -166,6 +193,9 @@ class AdminCourseTypeControllerTest extends CourseTestBase
         \TestDataManager::restoreDatabase();
     }
 
+    /**
+     * @group course_type
+     */
     public function testCourseInfoPageAfterDeletingCourseType()
     {
         $courseCountBefore = $this->countCoursesOnCourseInfoPage();
@@ -180,6 +210,9 @@ class AdminCourseTypeControllerTest extends CourseTestBase
         \TestDataManager::restoreDatabase();
     }
 
+    /**
+     * @group course_type
+     */
     public function testHomePageAfterDeletingCourseType()
     {
         $courseCountBefore = $this->countCourseTypesOnHomePage();
@@ -194,6 +227,9 @@ class AdminCourseTypeControllerTest extends CourseTestBase
         \TestDataManager::restoreDatabase();
     }
 
+    /**
+     * @group course_type
+     */
     public function testTimetableAfterDeletingCourseType()
     {
         $courseCountBefore = $this->countCoursesInTimeTable();
