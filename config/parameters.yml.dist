@@ -1,5 +1,5 @@
 # This file defines the canonical configuration parameters of the application.
-# Symfony uses this file as a template to generate the real app/config/parameters.yml
+# Symfony uses this file as a template to generate the real config/parameters.yml
 # used by the application.
 # See http://symfony.com/doc/current/best_practices/configuration.html#canonical-parameters
 parameters:

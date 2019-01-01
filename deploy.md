@@ -14,7 +14,7 @@ sudo setfacl -dR -m u:www-data:rwX kodeklubben/app/cache kodeklubben/app/logs ko
 ```
 
 ### Setting Up the Application
-#### 1. Make sure a new (empty) database has been created and is configured correctly in app/config/parameters.yml
+#### 1. Make sure a new (empty) database has been created and is configured correctly in config/parameters.yml
 
 #### 2. Set environment to production
 `export SYMFONY_ENV=prod`

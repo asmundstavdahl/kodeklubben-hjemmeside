@@ -46,7 +46,7 @@ class TestDataManager
     }
 
     public static function deleteDatabase() {
-        $folder = __DIR__ . '/cache/test/';
+        $folder = __DIR__ . '/../cache/test/';
         foreach(array('test.db','test.db.bk') AS $file){
             if(file_exists($folder . $file)){
                 unlink($folder . $file);
@@ -55,10 +55,10 @@ class TestDataManager
     }
 
     public static function backupDatabase() {
-        copy(__DIR__ . '/cache/test/test.db', __DIR__ . '/cache/test/test.db.bk');
+        copy(__DIR__ . '/../cache/test/test.db', __DIR__ . '/../cache/test/test.db.bk');
     }
 
     public static function restoreDatabase() {
-        copy(__DIR__ . '/cache/test/test.db.bk', __DIR__ . '/cache/test/test.db');
+        copy(__DIR__ . '/../cache/test/test.db.bk', __DIR__ . '/../cache/test/test.db');
     }
 }

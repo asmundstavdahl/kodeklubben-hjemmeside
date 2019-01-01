@@ -1,6 +1,6 @@
 @import "variables";
-@import "../../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "../../../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../node_modules/font-awesome/scss/font-awesome";
 @import "bootswatch";
 @import "box";
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic');
@@ -92,7 +92,7 @@ hr{
 .messages {
   padding:5px;
   .message {
-    //white-space: nowrap;
+    white-space: pre-wrap;
     overflow: hidden;
     text-overflow: ellipsis;
     &:hover {

@@ -7,7 +7,7 @@
         "psr-4": {
             "AppBundle\\": "src/AppBundle"
         },
-        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
+        "classmap": [ "src/AppKernel.php", "src/AppCache.php" ]
     },
     "require": {
         "php"                                  : ">=7.2",
@@ -23,13 +23,12 @@
         "patchwork/jsqueeze"                   : "~1.0",
         "sensio/distribution-bundle"           : "~5.0",
         "sensio/framework-extra-bundle"        : "~3.0",
-        "symfony/assetic-bundle"               : "~2.6",
         "symfony/monolog-bundle"               : "~2.7",
         "symfony/swiftmailer-bundle"           : "~2.3",
         "symfony/symfony"                      : "~3.4",
         "twig/extensions"                      : "^1.5",
         "friendsofsymfony/jsrouting-bundle"    : "^1.6",
-        "symfony/filesystem"                   : "^2.8",
+        "symfony/filesystem"                   : "^2.8|^3.4",
         "doctrine/doctrine-migrations-bundle"  : "^1.0",
         "exercise/htmlpurifier-bundle"         : "^0.2.3",
         "egeloen/ckeditor-bundle"              : "^4.0",
@@ -77,7 +76,7 @@
         "symfony-web-dir": "web",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml",
+            "file": "config/parameters.yml",
             "env-map": {
                 "database_url": "DATABASE_URL",
                 "secret": "SYMFONY_SECRET"
