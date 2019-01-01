@@ -57,7 +57,7 @@ class CourseTestBase extends AppWebTestCase
 
         $crawler = $this->goToSuccessful($client, '/');
 
-        return $crawler->filter('table#timeTable')->filter('tr')->count() - 1;
+        return $crawler->filter('tr.time-table-class')->count();
     }
 
     protected function countParticipantsOnParticipantsPage()
