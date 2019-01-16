@@ -1,86 +1,18 @@
 {
-    "name": "kodeklubben/kodeklubben-hjemmeside",
+    "name": "asmundstavdahl/kodeklubben-hjemmeside",
     "license": "proprietary",
     "type": "project",
     "description": "Utviklingsprosjekt for kodeklubben som sikter mot å lage en generisk hjemmeside som kan brukes av alle landets kodeklubber.",
     "autoload": {
         "psr-4": {
-            "AppBundle\\": "src/AppBundle"
-        },
-        "classmap": [ "src/AppKernel.php", "src/AppCache.php" ]
+            "": "src/"
+        }
     },
     "require": {
-        "php"                                  : ">=7.2",
-        "doctrine/doctrine-bundle"             : "~1.5",
-        "doctrine/doctrine-fixtures-bundle"    : "~2.2",
-        "doctrine/orm"                         : "~2.4",
-        "erusev/parsedown"                     : "~1.5",
-        "ezyang/htmlpurifier"                  : "~4.7",
-        "incenteev/composer-parameter-handler" : "~2.1",
-        "ircmaxell/password-compat"            : "~1.0",
-        "knplabs/knp-paginator-bundle"         : "~2.4",
-        "leafo/scssphp"                        : "~0.1.5",
-        "patchwork/jsqueeze"                   : "~1.0",
-        "sensio/distribution-bundle"           : "~5.0",
-        "sensio/framework-extra-bundle"        : "~3.0",
-        "symfony/monolog-bundle"               : "~2.7",
-        "symfony/swiftmailer-bundle"           : "~2.3",
-        "symfony/symfony"                      : "~3.4",
-        "twig/extensions"                      : "^1.5",
-        "friendsofsymfony/jsrouting-bundle"    : "^1.6",
-        "symfony/filesystem"                   : "^2.8|^3.4",
-        "doctrine/doctrine-migrations-bundle"  : "^1.0",
-        "exercise/htmlpurifier-bundle"         : "^0.2.3",
-        "egeloen/ckeditor-bundle"              : "^4.0",
-        "twig/twig": "~1.34"
+        "asmundstavdahl/rapd": "^0.5",
+        "twig/twig": "^2.6"
     },
     "require-dev": {
-        "ext-pdo_sqlite"                       : "*",
-        "sensio/generator-bundle"              : "~3.0",
-        "phpunit/phpunit": "^7"
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
-        ],
-        "post-update-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
-        ],
-        "build": [
-            "php app/console assets:install --symlink web",
-            "npm install",
-            "gulp build:dev",
-            "php app/console doctrine:database:create --env=dev",
-            "php app/console doctrine:schema:update --force --env=dev",
-            "php app/console doctrine:fixtures:load --env=dev -n"
-        ]
-    },
-    "config": {
-        "bin-dir": "bin",
-        "platform": {
-            "php": "7.2"
-        }
-    },
-    "extra": {
-        "symfony-app-dir": "app",
-        "symfony-web-dir": "web",
-        "symfony-assets-install": "relative",
-        "incenteev-parameters": {
-            "file": "config/parameters.yml",
-            "env-map": {
-                "database_url": "DATABASE_URL",
-                "secret": "SYMFONY_SECRET"
-            }
-        }
+        "leafo/scssphp": "^0.7.7"
     }
 }

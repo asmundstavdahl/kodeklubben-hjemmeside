@@ -52,3 +52,12 @@ node_modules
 .buildpath
 .project
 .settings
+
+/vendor/
+
+php_errors.log
+**/php_errors.log
+
+*.sqlite3*
+**/.sqlite3*
+/tmp

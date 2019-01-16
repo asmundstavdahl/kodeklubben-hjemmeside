@@ -1,0 +1,7 @@
+RewriteEngine On
+# Allow direct access to files
+RewriteCond %{REQUEST_FILENAME} !-f
+# Allow direct access to directories
+#RewriteCond %{REQUEST_FILENAME} !-d
+# Send all requests to index.php
+RewriteRule ^(.*)$ index.php [QSA,L]

@@ -1,18 +1,13 @@
 
+.PHONY: all server test
 
-all:
-	grep '^[a-z]' Makefile
+all: setup
 
-.PHONY: all update-php-cs-fixer.phar update-composer.phar
+setup:
+	composer install
 
-update-php-cs-fixer.phar:
-	php bin/php-cs-fixer.phar self-update
+server: setup
+	php -S localhost:8000 --docroot=public/
 
-install-php-cs-fixer.phar:
-	wget https://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O app/php-cs-fixer.phar
-
-update-composer.phar:
-	wget https://getcomposer.org/composer.phar -O composer.phar
-
-path:
-	@echo "Kjør \`source app/env.sh\`"
+test:
+	php run-tests.php

@@ -13,18 +13,18 @@
     <div class="row container row-home">
         <div class=" col-md-7 col-md-offset-1 col-md-push-4">
             <!-- Schedule -->
-            {{ render(controller('AppBundle:Home:showTimeTable')) }}
+            {{ render("home/time_table.html.twig") }}
         </div>
         <div class="col-md-4 col-md-pull-8">
             <!-- Messages -->
-            {{ render(controller('AppBundle:Home:showMessages')) }}
+            {{ render("home/messages.html.twig") }}
         </div>
     </div>
 
     <div class="row-home">
 
     <!-- Courses -->
-    {{ render(controller('AppBundle:Home:showCourseTypes')) }}
+    {{ render("home/course.html.twig", {"couseTypes": courseTypes}) }}
     </div>
 
     <br>
