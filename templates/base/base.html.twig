@@ -24,7 +24,7 @@
             {% block body %}{% endblock %}
         </div>
         <div class="container">
-            {{ render(["HomeController", "showSponsorsAction"]) }}
+            {{ include "home/sponsors.html.twig" }}
         </div>
         <div class="container-fluid">
             {% include 'base/footer.html.twig' %}

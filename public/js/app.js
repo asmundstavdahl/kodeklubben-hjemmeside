@@ -1,6 +1,6 @@
 //Cache the loading wheel image
 var loading =$('<img/>');
-loading.attr('src', "/img/loader.gif");
+loading.attr('src', "/images/loader.gif");
 loading.attr('width', 20);
 
 function getLoadingWheel(){

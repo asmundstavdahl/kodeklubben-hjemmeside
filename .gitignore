@@ -61,3 +61,6 @@ php_errors.log
 *.sqlite3*
 **/.sqlite3*
 /tmp
+
+/public/build
+/public/vendor

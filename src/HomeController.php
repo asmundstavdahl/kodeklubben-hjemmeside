@@ -95,8 +95,7 @@ class HomeController extends Controller
      */
     public function showSponsorsAction()
     {
-        $club = self::get('club_manager')->getCurrentClub();
-        $clubSponsors = self::getDoctrine()->getRepository('AppBundle:Sponsor')->findAllByClub($club);
+        $clubSponsors = Sponsor::findAll();
 
         return self::render('home/sponsors.html.twig', array(
             'sponsors' => $clubSponsors,

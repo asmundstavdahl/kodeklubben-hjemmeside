@@ -20,6 +20,13 @@ Environment::set("DESCRIPTION", "Default description of the rapd/skeleton");
 
 
 class Router extends \Rapd\Router {};
+class Route extends \Rapd\Router\Route
+{
+    function __toString()
+    {
+        return "<".get_called_class()."#{$this->name}>";
+    }
+};
 
 Router::setBasePath(Environment::get("ASSET_BASE"));
 
@@ -42,18 +49,13 @@ $twig->addExtension(new \AppBundle\Twig\MockExtension());
 # Configure a function to be used by View::render()
 View::setRenderer(function(string $template, array $data = []) use ($twig) {
     $data = array_merge(Environment::getAll(), $data);
-
-    return $twig->render($template, $data);
-
-    require_once "../src/template-preparations.php";
-    extract(Environment::getAll());
-    extract($data);
-    ob_start();
-    include __DIR__."/templates/{$template}";
-    return ob_get_clean();
+    $output = $twig->render($template, $data);
+    return $output;
 });
 
 function setTitle($newTitle)
 {
     Environment::set("TITLE", "{$newTitle} - Kodeklubben Trondheim");
 }
+
+View::render("home/show.html.twig");

@@ -13,5 +13,9 @@ if($matchedRoute === false){
 	header("HTTP/1.1 404 Not Found");
 	echo View::render("404");
 } else {
-	echo $matchedRoute->execute($uri);
+	$output = $matchedRoute->execute($uri);
+	if (strlen($output) === 0) {
+		error_log("No output given by {$matchedRoute}.");
+	}
+	echo $output;
 }

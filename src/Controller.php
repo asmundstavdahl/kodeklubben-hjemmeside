@@ -6,6 +6,6 @@ class Controller
 
     public function render(string $templateName, array $data = [])
     {
-    	View::render($templateName, $data);
+    	return View::render($templateName, $data);
     }
 }
