@@ -13,7 +13,7 @@
         <meta property="og:description" content="{% block facebookDescription %}{{ get_content('header')|striptags }}{% endblock %}" />
         <meta property="og:site_name" content="{{ club.name }}" />
 
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
         {% block stylesheets %}{% endblock %}
 
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -24,13 +24,13 @@
             {% block body %}{% endblock %}
         </div>
         <div class="container">
-            {{ include "home/sponsors.html.twig" }}
+            {% include "home/sponsors.html.twig" %}
         </div>
         <div class="container-fluid">
             {% include 'base/footer.html.twig' %}
         </div>
-        <script src="{{ asset('js/jquery.min.js') }}"></script>
-        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('vendor/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('vendor/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('js/app.js') }}"></script>
         <script>
             {% if google_analytics_id is defined and google_analytics_id | length > 0 %}

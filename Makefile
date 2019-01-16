@@ -26,6 +26,7 @@ asset-css: asset-fonts
 	php vendor/bin/pscss assets/scss/admin_app.scss > public/build/css/admin_app.css
 asset-fonts: yarn-install
 	mkdir -p public/vendor/fonts
+	cp -r node_modules/bootstrap-sass/assets/fonts public/vendor/
 	cp node_modules/font-awesome/fonts/fontawesome-webfont.woff public/vendor/fonts/
 	cp node_modules/font-awesome/fonts/fontawesome-webfont.ttf public/vendor/fonts/
 	cp node_modules/font-awesome/fonts/fontawesome-webfont.eot public/vendor/fonts/
