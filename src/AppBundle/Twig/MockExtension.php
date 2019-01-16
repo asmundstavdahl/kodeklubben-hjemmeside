@@ -34,10 +34,11 @@ class MockExtension extends \Twig_Extension
             }),
             new \Twig_SimpleFunction('get_club', function()
             {
-                return [
+                return new \Club([
                     "name" => "Kodeklubben Trondheim",
                     "email" => "kodeklubbentrondheim@gmail.com",
-                ];
+                    "region" => "Trondheim",
+                ]);
             }),
             new \Twig_SimpleFunction('asset', [$this, "asset"]),
             new \Twig_SimpleFunction('is_granted', function($role)
