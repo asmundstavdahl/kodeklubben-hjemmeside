@@ -36,11 +36,11 @@ monolog:
 
 doctrine:
     dbal:
-        path: "%kernel.root_dir%/../data/prod.db"
+        path: "%kernel.root_dir%/../var/prod.db"
         driver: pdo_sqlite
         host: localhost
         port: null
-        dbname: "%kernel.root_dir%/../data/prod.db"
+        dbname: "%kernel.root_dir%/../var/prod.db"
         user: "%database_user%"
         password: "%database_password%"
         charset: UTF8
