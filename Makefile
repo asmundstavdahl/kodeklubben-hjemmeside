@@ -6,7 +6,7 @@ all:
 .PHONY: all update-php-cs-fixer.phar update-composer.phar
 
 update-php-cs-fixer.phar:
-	php bin/php-cs-fixer.phar self-update
+	php app/php-cs-fixer.phar self-update
 
 install-php-cs-fixer.phar:
 	wget https://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O app/php-cs-fixer.phar
