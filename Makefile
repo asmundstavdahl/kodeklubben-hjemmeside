@@ -1,7 +1,7 @@
 all:
 	grep '^[a-z]' Makefile
 
-.PHONY: all update-php-cs-fixer.phar update-composer.phar assets asset-files asset-images asset-scripts asset-vendor
+.PHONY: all update-php-cs-fixer.phar update-composer.phar watch assets asset-files asset-images asset-scripts asset-vendor
 
 update-php-cs-fixer.phar:
 	php app/php-cs-fixer.phar self-update
@@ -16,11 +16,14 @@ install-sass:
 	@echo "Install sass manually and make sure it's in your PATH"
 
 path:
-	@echo "Kjør \`source app/env.sh\`"
+	@echo "\`source app/env.sh\`"
 
 dev-db:
 	php app/console doctrine:schema:create
 	php app/console doctrine:fixtures:load
+
+watch: assets
+	bash -c 'inotifywait -m -e modify -r assets/ | while :;do echo -ne "watching...\r"; read event; echo "== $${event} =="; make assets; done'
 
 assets:
 	make asset-files
