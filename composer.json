@@ -29,11 +29,10 @@
         "symfony/symfony"                      : "~3.4",
         "twig/extensions"                      : "^1.5",
         "friendsofsymfony/jsrouting-bundle"    : "^1.6",
-        "symfony/filesystem"                   : "^2.8",
         "doctrine/doctrine-migrations-bundle"  : "^1.0",
         "exercise/htmlpurifier-bundle"         : "^0.2.3",
         "egeloen/ckeditor-bundle"              : "^4.0",
-        "twig/twig": "~1.34"
+        "twig/twig": "~1.42.3"
     },
     "require-dev": {
         "ext-pdo_sqlite"                       : "*",
