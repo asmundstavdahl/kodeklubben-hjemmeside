@@ -1,6 +1,9 @@
 ## Set up development environment
 ### Requirements
 - [PHP](http://php.net/downloads.php) version >= 7.2
+  - extension=mbstring
+  - extension=pdo_sqlite
+  - date.timezone = Europe/Oslo
 - [Node](https://nodejs.org/en/) version >= 4
 
 #### UNIX:
