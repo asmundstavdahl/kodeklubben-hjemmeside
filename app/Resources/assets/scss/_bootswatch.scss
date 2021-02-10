@@ -4,6 +4,9 @@
 
 $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic" !default;
 @import url($web-font-path);
+@import "variables";
+@import "box";
+@import "skin-blue";
 
 // Navbar =====================================================================
 
@@ -38,11 +41,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
 }
 
 .btn:active {
-  @include box-shadow(none);
+  box-shadow: none;
 }
 
 .btn-group.open .dropdown-toggle {
-  @include box-shadow(none);
+  box-shadow: none;
 }
 
 // Typography =================================================================
@@ -122,10 +125,10 @@ table,
 .form-control,
 input {
   border-width: 2px;
-  @include box-shadow(none);
+  box-shadow: none;
 
   &:focus {
-    @include box-shadow(none);
+    box-shadow: none;
   }
 }
 
@@ -256,7 +259,7 @@ input {
 
 .progress {
   height: 10px;
-  @include box-shadow(none);
+  box-shadow: none;
   .progress-bar {
     font-size: 10px;
     line-height: 10px;
@@ -266,7 +269,7 @@ input {
 // Containers =================================================================
 
 .well {
-  @include box-shadow(none);
+  box-shadow: none;
 }
 
 a.list-group-item {
